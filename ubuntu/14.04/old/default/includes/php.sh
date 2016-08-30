@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 install python-software-properties
 sudo add-apt-repository ppa:ondrej/php5-5.6

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 export VAGRANT_REPO=/home/vagrant/repo
 export VAGRANT_SCRIPTS=$VAGRANT_REPO/vagrant

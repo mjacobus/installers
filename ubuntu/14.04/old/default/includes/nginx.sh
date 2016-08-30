@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo add-apt-repository -y ppa:nginx/stable
 sudo apt-get -y update

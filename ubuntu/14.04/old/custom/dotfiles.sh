@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 inform "Installing dotfiles..."
 git clone http://github.com/mjacobus/.dotfiles.git ~/.dotfiles

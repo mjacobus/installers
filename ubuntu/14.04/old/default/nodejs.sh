@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if ! has node; then
   as_vagrant "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash"
