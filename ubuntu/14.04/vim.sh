@@ -4,4 +4,5 @@ set -e
 
 source "`dirname $0`/config.sh"
 
-install ctags
+install vim
+install vim-gnome

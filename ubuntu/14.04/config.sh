@@ -1,7 +1,16 @@
 #!/bin/bash
 
-export VAGRANT_REPO=/home/vagrant/repo
-export VAGRANT_SCRIPTS=$VAGRANT_REPO/vagrant
+SCRIPTS=`dirname $0`
 
-cd $VAGRANT_SCRIPTS
-source functions.sh
+function mecho() {
+  echo -e '\E[32m'"\033[1m"
+  echo "#############################################################################"
+  echo "# $@"
+  echo "#############################################################################"
+  echo -e "\033[0m"
+}
+
+function install() {
+  mecho "Installing $@"
+  sudo apt-get install -y $@
+}
