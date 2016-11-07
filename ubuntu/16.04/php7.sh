@@ -8,6 +8,7 @@ set -e
 
 install php7.0
 install php7.0-bcmath
+install php7.0-mcrypt
 install php7.0-curl
 install php7.0-gd
 install php7.0-intl
