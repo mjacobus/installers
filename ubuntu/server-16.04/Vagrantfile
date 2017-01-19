@@ -3,23 +3,39 @@
 file = File.expand_path('../../../vagrant_helper', __FILE__);
 require_relative file
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
 Vagrant.configure(2) do |config|
-  # The most common configuration options are documented and commented below.
-  # For a complete reference, please see the online documentation at
-  # https://docs.vagrantup.com.
+  # Oficial ubuntu server
+  # this is failing to mount vagrant folder
+  # config.vm.box = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
 
-  # Every Vagrant development environment requires a box. You can search for
-  # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
+  config.vm.box = "axeloz/ubuntu-server-16.04"
+  # config.vm.box = "boxcutter/ubuntu1604"
+
+  # this is not server
+  # config.vm.box = "ubuntu/xenial64"
+  #
+  # config.vm.box = "bento/ubuntu-16.04"
+
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.ssh.forward_agent = true
+
+
+  # config.vm.synced_folder ".", "/vagrant/"
 
   config.vm.provider "virtualbox" do |vm|
-    vm.name = "Installers Ubuntu 14.04"
+    vm.name = "Installers Ubuntu Server 16.04"
 
     helper = VagrantHelper.new(RbConfig::CONFIG["host_os"])
     vm.memory = helper.memory_fraction(8)
   end
+
+  # config.vm.synced_folder ".", "/vagrant"
+
+  # http://stackoverflow.com/questions/37283269/how-i-can-get-vagrant-folder-on-ubuntu-xenial64
+  # sudo apt-get install virtualbox-guest-utils
+  config.vm.provision :shell, inline: <<-SCRIPT
+    echo 'LANG="en_US.utf-8" > /etc/default/locale'
+    echo 'export LANG="en_US.utf-8"' >> /root/.bashrc
+    echo 'export LANG="en_US.utf-8"' >> /home/vagrant/.bashrc
+  SCRIPT
 end
