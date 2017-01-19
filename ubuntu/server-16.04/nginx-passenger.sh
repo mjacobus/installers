@@ -59,6 +59,9 @@ fi
 
 chruby $RUBY_VERSION
 
+echo "Installing bundler"
+
+gem install bundler
 
 echo "Installing Passenger"
 
@@ -78,3 +81,7 @@ backup_file /etc/nginx/nginx.conf
 sed -i 's/# \(include \/etc\/nginx\/passenger\.conf\.*\)/\1/g' /etc/nginx/nginx.conf
 
 sudo /usr/bin/passenger-config validate-install --auto
+
+backup_file /etc/nginx/passenger.conf
+sed -i 's/\(^passenger_ruby.*passenger_free_ruby.*\)/# \1/g' /etc/nginx/passenger.conf
+echo "passenger_ruby /opt/rubies/ruby-$RUBY_VERSION/bin/ruby;" >> /etc/nginx/passenger.conf

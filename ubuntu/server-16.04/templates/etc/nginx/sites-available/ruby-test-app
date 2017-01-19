@@ -1,0 +1,11 @@
+server {
+  listen 80;
+  root /var/www/ruby_test_app/public;
+  server_name _;
+
+  passenger_enabled on;
+  passenger_friendly_error_pages on;
+
+  # access_log /var/log/nginx/apps/ruby_test_app_access.log;
+  # error_log /var/log/nginx/apps/ruby_test_app_error.log;
+}

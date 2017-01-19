@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPTS=`dirname $0`
+TEMPLATES_PATH=`dirname $0`/templates
 
 function mecho() {
   echo -e '\E[32m'"\033[1m"
@@ -23,3 +24,13 @@ function backup_file () {
   mecho "Backing up file ${file} to ${backup}"
   cp -rp $file $backup
 }
+
+function template () {
+  local file=$1
+  local sourceFile=$TEMPLATES_PATH/$file
+
+  mecho "Coping ${sourceFile} to ${file}"
+  cp $sourceFile $file
+}
+
+alias info='mecho'
