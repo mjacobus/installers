@@ -6,5 +6,6 @@ else
   if [ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ]; then
     source /usr/local/share/chruby/chruby.sh
   fi
-  chruby $RUBY_VERSION"
+
+  chruby 2.4.0
 fi

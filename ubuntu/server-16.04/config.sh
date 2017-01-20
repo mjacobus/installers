@@ -2,8 +2,9 @@
 
 
 RUBY_VERSION='2.4.0'
-SCRIPTS=`dirname $0`
-TEMPLATES_PATH=`dirname $0`/templates
+SCRIPTS=`pwd`
+BASE_DIR=$SCRIPTS
+TEMPLATES_PATH=$BASE_DIR/templates
 PROFILE_CHRUBY=/etc/profile.d/chruby.sh
 
 function mecho() {
@@ -33,7 +34,7 @@ function template () {
   local sourceFile=$TEMPLATES_PATH/$file
 
   mecho "Coping ${sourceFile} to ${file}"
-  cp $sourceFile $file
+  cp -f $sourceFile $file
 }
 
 alias info='mecho'

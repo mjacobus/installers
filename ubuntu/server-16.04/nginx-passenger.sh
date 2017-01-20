@@ -37,17 +37,8 @@ tar -xzvf chruby-0.3.9.tar.gz
 cd chruby-0.3.9/
 make install
 
-if [ "$CHRUBY_VERSION"]; then
-  echo ''
-else
-  source /usr/local/share/chruby/chruby.sh
-  echo 'if [ -n "$BASH_VERSION" ] || [ -n "$ZSH_VERSION" ]; then' >  $PROFILE_CHRUBY
-  echo '  source /usr/local/share/chruby/chruby.sh'               >> $PROFILE_CHRUBY
-  echo 'fi'                                                       >> $PROFILE_CHRUBY
-  echo "chruby $RUBY_VERSION"                                     >> $PROFILE_CHRUBY
-fi
-
-chruby $RUBY_VERSION
+template /etc/profile.d/chruby.sh
+source /etc/profile.d/chruby.sh
 
 echo "Installing bundler"
 
