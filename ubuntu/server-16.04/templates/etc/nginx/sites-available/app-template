@@ -1,0 +1,12 @@
+server {
+  listen 80;
+  root /var/www/_DOMAIN_/public;
+  server_name _DOMAIN_;
+
+  passenger_enabled on;
+  passenger_friendly_error_pages on;
+
+  access_log /var/log/nginx/_DOMAIN__access.log;
+  error_log /var/log/nginx/_DOMAIN__error.log;
+}
+

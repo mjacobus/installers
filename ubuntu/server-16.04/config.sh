@@ -32,9 +32,14 @@ function backup_file () {
 function template () {
   local file=$1
   local sourceFile=$TEMPLATES_PATH/$file
+  local target=$file
 
-  mecho "Coping ${sourceFile} to ${file}"
-  cp -f $sourceFile $file
+  if [[ $# == 2 ]]; then
+    target=$2
+  fi
+
+  mecho "Coping ${sourceFile} to ${target}"
+  cp -f $sourceFile $target
 }
 
 alias info='mecho'
