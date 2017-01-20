@@ -10,6 +10,9 @@ ln -s /etc/nginx/sites-available/ruby-test-app /etc/nginx/sites-enabled/ruby-tes
 rm -rf /etc/nginx/sites-enabled/default
 
 git clone https://github.com/mjacobus/rack-test-app.git /var/www/ruby_test_app
+
+source $PROFILE_CHRUBY
+
 cd /var/www/ruby_test_app && bundle install
 
 service nginx restart

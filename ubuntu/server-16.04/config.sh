@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+
+RUBY_VERSION='2.4.0'
 SCRIPTS=`dirname $0`
 TEMPLATES_PATH=`dirname $0`/templates
+PROFILE_CHRUBY=/etc/profile.d/chruby.sh
 
 function mecho() {
   echo -e '\E[32m'"\033[1m"

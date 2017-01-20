@@ -2,15 +2,6 @@
 
 # Works on Ubuntu server 16.4
 
-#
-# Configuration
-#-------------------------------------------------------------------------------
-
-RUBY_VERSION='2.4.0'
-
-
-#-------------------------------------------------------------------------------
-
 set -e
 source "`dirname $0`/config.sh"
 alias echo='mecho'
@@ -45,7 +36,6 @@ cd /opt
 tar -xzvf chruby-0.3.9.tar.gz
 cd chruby-0.3.9/
 make install
-PROFILE_CHRUBY=/etc/profile.d/chruby.sh
 
 if [ "$CHRUBY_VERSION"]; then
   echo ''
