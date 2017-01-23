@@ -5,8 +5,15 @@ set -e
 user=deploy
 githubUser=mjacobus
 
-keysFile=/home/$user/.ssh/authorized_keys
-tmpFile=/home/$user/.ssh/authorized_keys
+homeFolder=/home/$user
+sshFolder=$homeFolder/.ssh
+keysFile=$sshFolder/authorized_keys
+tmpFile=$sshFolder/authorized_keys.tmp
+
+# create folder and files, case they do not exist
+mkdir -p $sshFolder
+touch $keysFile
+touch $tmpFile
 
 # adds github keys
 curl https://github.com/$githubUser.keys >> $keysFile
@@ -14,5 +21,7 @@ cat $keysFile | sort -u > $tmpFile
 cat $tmpFile > $tmpFile
 
 # fix permissions
-chmod o-a,g-a $keysFile
-chmod u+rw $keysFile
+chmod 600 $keysFile $sshFolder $tmpFile
+chown deploy $sshFolder $homeFolder $keysFile $tmpFile
+
+ls -lhs $keysFile $tmpFile
