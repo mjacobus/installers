@@ -17,9 +17,10 @@ adduser --system \
    --shell /bin/bash \
    --gecos "Deploy user" \
    --group \
-   --disabled-password \
    --home $homeFolder \
    $user
+
+adduser $user sudo
 
 cronFile=/etc/cron.hourly/add-deploy-user-keys.sh
 echo "Generating $cronfile"
