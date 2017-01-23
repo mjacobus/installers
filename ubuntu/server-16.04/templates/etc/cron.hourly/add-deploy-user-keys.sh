@@ -21,7 +21,8 @@ cat $keysFile | sort -u > $tmpFile
 cat $tmpFile > $tmpFile
 
 # fix permissions
-chmod 600 $keysFile $sshFolder $tmpFile
 chown deploy $sshFolder $homeFolder $keysFile $tmpFile
+chmod 700 $sshFolder
+chmod 600 $keysFile $tmpFile
 
 ls -lhs $keysFile $tmpFile

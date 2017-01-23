@@ -11,6 +11,7 @@ install nginx
 source ruby.sh
 
 
+install build-essential
 
 echo "Installing Passenger"
 
