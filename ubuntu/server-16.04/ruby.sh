@@ -4,6 +4,11 @@
 # Ruby installation
 #-------------------------------------------------------------------------------
 
+set -e
+source "`dirname $0`/config.sh"
+
+install build-essential
+
 echo "Installing ruby-install"
 
 wget -O /opt/ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz

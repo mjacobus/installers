@@ -10,9 +10,6 @@ install git
 install nginx
 source ruby.sh
 
-
-install build-essential
-
 echo "Installing Passenger"
 
 # https://www.phusionpassenger.com/library/install/nginx/install/oss/xenial/
