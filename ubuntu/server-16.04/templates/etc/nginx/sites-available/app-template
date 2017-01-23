@@ -1,6 +1,6 @@
 server {
   listen 80;
-  root /var/www/_DOMAIN_/public;
+  root /var/www/apps/_DOMAIN_/current/public;
   server_name _DOMAIN_;
 
   passenger_enabled on;
