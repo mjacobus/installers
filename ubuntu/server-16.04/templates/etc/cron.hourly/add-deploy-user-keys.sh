@@ -2,8 +2,8 @@
 
 set -e
 
-user=deploy
-githubUser=mjacobus
+user=_DEPLOY_USER_
+githubUser=_GITHUB_USER_
 
 homeFolder=/home/$user
 sshFolder=$homeFolder/.ssh

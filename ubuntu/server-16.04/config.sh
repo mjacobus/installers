@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [ ! -f .env ]; then
+  echo "Please provide an .env file"
+  exit 1
+fi
+
+source .env
 
 RUBY_VERSION='2.4.0'
 SCRIPTS=`pwd`
@@ -40,6 +46,9 @@ function template () {
 
   mecho "Coping ${sourceFile} to ${target}"
   cp -f $sourceFile $target
+
+  sed -i "s/_DEPLOY_USER_/$DEPLOY_USER/g" $target
+  sed -i "s/_GITHUB_USER_/$GITHUB_USER/g" $target
 }
 
 alias info='mecho'

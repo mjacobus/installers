@@ -4,7 +4,7 @@ set -e
 source "`dirname $0`/config.sh"
 alias echo='mecho'
 
-user=deploy
+user=$DEPLOY_USER
 
 homeFolder=/home/$user
 sshFolder=$home/.ssh
