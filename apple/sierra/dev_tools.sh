@@ -14,6 +14,4 @@ brew install curl
 brew install phantomjs
 brew install wget
 brew install libtool
-
-brew install mplayer
-
+brew install zeromq
