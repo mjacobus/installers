@@ -15,3 +15,4 @@ brew install phantomjs
 brew install wget
 brew install libtool
 brew install zeromq
+brew install casperjs
