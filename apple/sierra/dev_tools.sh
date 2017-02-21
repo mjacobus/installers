@@ -16,3 +16,4 @@ brew install wget
 brew install libtool
 brew install zeromq
 brew install casperjs
+brew install libpqxx
