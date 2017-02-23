@@ -17,4 +17,3 @@ brew install libtool
 brew install zeromq
 brew install casperjs
 brew install libpqxx
-brew install neovim/neovim/neovim
