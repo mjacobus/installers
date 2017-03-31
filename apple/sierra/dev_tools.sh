@@ -18,3 +18,6 @@ brew install zeromq
 brew install casperjs
 brew install libpqxx
 brew install jq
+brew install npm
+brew install bower
+brew install watch
