@@ -21,3 +21,5 @@ brew install jq
 brew install npm
 brew install bower
 brew install watch
+brew install yarn
+brew install htop
