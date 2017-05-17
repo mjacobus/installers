@@ -6,6 +6,7 @@ set -e
 source "`dirname $0`/config.sh"
 alias echo='mecho'
 
+sudo apt-get update
 install git
 install nginx
 source ruby.sh

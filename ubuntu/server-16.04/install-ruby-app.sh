@@ -20,7 +20,7 @@ sed -i "s/_DOMAIN_/$domain/g" $targetFile
 
 cat $targetFile
 
-if [ ! -d ]; then
+if [ ! -d $appsFolder ]; then
   mkdir $appsFolder
   chown deploy:www-data $appsFolder
   chmod g+s appsFolder

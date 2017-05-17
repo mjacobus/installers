@@ -8,6 +8,12 @@ set -e
 source "`dirname $0`/config.sh"
 
 install build-essential
+install ruby-dev
+install mysql-client
+install libmysqlclient-dev
+install libpq-dev
+install sqlite
+install libsqlite3-dev
 
 echo "Installing ruby-install"
 

@@ -9,4 +9,3 @@ server {
   access_log /var/log/nginx/_DOMAIN__access.log;
   error_log /var/log/nginx/_DOMAIN__error.log;
 }
-
