@@ -16,7 +16,9 @@ install php7.0-fpm       \
         php7.0-gd        \
         php7.0-mysql     \
         php7.0-sqlite    \
-        php7.0-intl      \ php7.0-xsl       \ php7.0-mcrypt    \
+        php7.0-intl      \
+        php7.0-xsl       \
+        php7.0-mcrypt    \
         php7.0-xdebug    \
         php7.0-memcache  \
         php7.0-memcached \
