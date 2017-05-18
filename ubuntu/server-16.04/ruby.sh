@@ -14,6 +14,8 @@ install libmysqlclient-dev
 install libpq-dev
 install sqlite
 install libsqlite3-dev
+install phyton-pip
+pip install Pygments
 
 echo "Installing ruby-install"
 
