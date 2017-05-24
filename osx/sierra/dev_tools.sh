@@ -23,3 +23,6 @@ brew install watch
 brew install yarn
 brew install htop
 brew install vim --override-system-vim
+
+brew tap grammarly/tap
+brew install grammarly/tap/rocker
