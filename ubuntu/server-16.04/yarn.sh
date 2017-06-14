@@ -10,3 +10,8 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update
 
 install yarn
+
+# node
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+install nodejs
+
