@@ -15,6 +15,7 @@ install php7.0-intl
 install php7.0-mbstring
 install php7.0-mysql
 install php7.0-xsl
+install php7.0-dev
 
 if [ ! -f /usr/bin/composer.phar ]; then
   mecho "Installing composer..."
