@@ -4,6 +4,7 @@ set -e
 
 source "`dirname $0`/config.sh"
 
+install nodejs npm
 install openssh-server
 install git
 install tmux
