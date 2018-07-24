@@ -32,7 +32,10 @@ brew install libtool
 brew install zmq
 
 brew install shellcheck
-# brew install automake
+brew install fzf
+brew install coreutils
+brew install gpg
+brew install automake
 # brew install autotools-dev
 # brew install libcurl
 # brew install libcurl4-gnutls-dev
@@ -55,4 +58,10 @@ brew install shellcheck
 # brew tap grammarly/tap
 # brew install grammarly/tap/rocker
 
+echo
+echo
+echo "-------------------------------------------------------------------------"
 echo "Finished"
+echo "-------------------------------------------------------------------------"
+echo
+echo
