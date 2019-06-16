@@ -1,13 +1,28 @@
-alias install='sudo apt-get install -y'
+#!/usr/bin/env bash
 
-sudo apt-get -y install zsh
-sudo apt-get -y install git
-sudo apt-get -y install tmux
-sudo apt-get -y install vim-gnome
-sudo apt-get -y install curl
-sudo apt-get -y install net-tools
-sudo apt-get -y install silversearcher-ag
+set -e
+
+exit
+sudo apt-get install -y libzmq3-dev
+sudo apt-get install -y  libcurl3-dev
+sudo apt-get install -y libmysqlclient-dev
+sudo apt-get install -y libsnappy-dev
+sudo apt-get install -y pkg-config
+sudo apt-get install -y mysql-client
+sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+sudo apt-get install -y gnome-tweak-tool
+sudo apt-get install -y openssh-server
+sudo apt-get install -y openssh-server
+sudo apt-get install -y zsh
+sudo apt-get install -y git
+sudo apt-get install -y tmux
+sudo apt-get install -y vim-gnome
+sudo apt-get install -y curl
+sudo apt-get install -y net-tools
+sudo apt-get install -y silversearcher-ag
+
+# maybes
+# sudo apt-get install -y cmake # need really
+# sudo apt-get install -y libtool automake autoconf
+
 # xclip -sel clip < ~/.ssh/id_rsa.pub
-
-
-
