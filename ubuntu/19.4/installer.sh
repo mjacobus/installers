@@ -2,9 +2,11 @@
 
 set -e
 
-exit
+sudo apt-get install -y ctags
+sudo apt-get install -y htop
+sudo apt-get install -y tig
 sudo apt-get install -y libzmq3-dev
-sudo apt-get install -y  libcurl3-dev
+sudo apt-get install -y libcurl3-dev
 sudo apt-get install -y libmysqlclient-dev
 sudo apt-get install -y libsnappy-dev
 sudo apt-get install -y pkg-config
