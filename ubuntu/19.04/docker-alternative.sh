@@ -2,6 +2,8 @@
 
 # https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions
 
+# NOTE: Looks like docker.io can be installed https://github.com/docker/for-linux/issues/533#issuecomment-510075889
+
 set -e
 
 sudo apt-get update
