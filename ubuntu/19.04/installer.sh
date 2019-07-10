@@ -22,6 +22,9 @@ sudo apt-get install -y vim-gnome
 sudo apt-get install -y curl
 sudo apt-get install -y net-tools
 sudo apt-get install -y silversearcher-ag
+sudo apt-get install -y libgconf-2-4
+
+
 
 # maybes
 # sudo apt-get install -y cmake # need really
