@@ -23,6 +23,7 @@ sudo apt-get install -y curl
 sudo apt-get install -y net-tools
 sudo apt-get install -y silversearcher-ag
 sudo apt-get install -y libgconf-2-4
+sudo apt-get install -y python
 
 
 
