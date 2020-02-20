@@ -26,8 +26,20 @@ Cannot reach rubygems.org on ipv6:
 
 Or disable ipv6 [for good](https://linuxconfig.org/how-to-disable-ipv6-address-on-ubuntu-18-04-bionic-beaver-linux).
 
-```
+
+#### Installing vagrant on Ubuntu 18.04
+
+```bash
 sudo apt install virtualbox
-curl -O https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_i686.deb
-sudo apt install vagrant_2.2.7_i686.deb
+curl -O https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.deb
+sudo apt install vagrant_2.2.7_x86_64.deb
+```
+
+Helpfull commands:
+
+```bash
+vagrant up --provider=virtualbox`          # better error message
+VBoxManage --version                       # better error message
+sudo apt-get install virtualbox-dkms       # install dependency
+sudo apt-get install linux-headers-generic # Maybe dependency
 ```
