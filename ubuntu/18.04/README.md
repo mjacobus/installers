@@ -25,3 +25,9 @@ Cannot reach rubygems.org on ipv6:
 - sysctl -w net.ipv6.conf.default.disable_ipv6=1
 
 Or disable ipv6 [for good](https://linuxconfig.org/how-to-disable-ipv6-address-on-ubuntu-18-04-bionic-beaver-linux).
+
+```
+sudo apt install virtualbox
+curl -O https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_i686.deb
+sudo apt install vagrant_2.2.7_i686.deb
+```
