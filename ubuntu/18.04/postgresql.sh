@@ -6,7 +6,7 @@
 set -ex
 
 sudo apt-get install -y postgresql postgresql-contrib
+sudo apt-get install -y postgresql-client
 
 sudo -u postgres psql -c "SELECT version();"
-
 sudo -u postgres createuser -s `whoami` -P

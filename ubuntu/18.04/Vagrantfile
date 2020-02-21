@@ -12,6 +12,6 @@ Vagrant.configure(2) do |config|
     vm.name = "Installers Ubuntu 14.04"
 
     helper = VagrantHelper.new(RbConfig::CONFIG["host_os"])
-    vm.memory = helper.memory_fraction(8)
+    vm.memory = helper.memory_fraction(4)
   end
 end
