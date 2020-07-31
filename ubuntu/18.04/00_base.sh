@@ -37,6 +37,7 @@ sudo apt-get install -y cmake
 sudo apt-get install -y default-mysql-client
 sudo apt-get install -y freetds-dev
 sudo apt-get install -y libcurl3-dev
+sudo apt-get install -y libffi-dev
 sudo apt-get install -y libgconf-2-4
 sudo apt-get install -y liblzma-dev
 sudo apt-get install -y libmysqlclient-dev
