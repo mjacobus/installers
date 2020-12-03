@@ -60,3 +60,4 @@ sudo apt-get install -y tzdata
 sudo apt-get install -y unixodbc
 sudo apt-get install -y unixodbc-dev
 sudo apt-get install -y zlib1g-dev
+sudo apt-get install -y libtag1-dev
