@@ -13,6 +13,9 @@ brew install --HEAD universal-ctags
 brew install gpg
 
 
+brew install vim --override-system-vim
+
+
 brew install wget
 brew install watch
 
