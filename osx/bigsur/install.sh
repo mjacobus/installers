@@ -21,4 +21,8 @@ brew install tig
 brew install taglib
 
 # GH Depencency
+brew install gh
 
+brew install libuv # fails w/o xcode
+brew install openssl
+brew install zlib
