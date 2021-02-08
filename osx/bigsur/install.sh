@@ -11,7 +11,7 @@ brew install the_silver_searcher
 brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
 brew install gpg
-brew install vim --override-system-vim
+brew install vim # --override-system-vim
 brew install wget
 brew install watch
 brew install python3
@@ -30,3 +30,7 @@ brew install zlib
 brew install postgresql
 brew install mysql
 
+
+# also install, but not included here yet
+# docker
+# docker-compose
