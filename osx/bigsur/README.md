@@ -16,13 +16,13 @@ Manual steps not to forget:
 - Install 1password
 - Install Telegram
 - Install Signal
+- Install Turbo Boost
 - Install Spectacle
   - Ctrl-Shift - HJKL for window placement
 - Install Alfred
   - Change spotlight keyboard shortcut
   - Set Alfred to command + space
-
-
+- Install printer [L4150](https://epson.com.br/Suporte/Impressoras/Impressoras-multifuncionais/Epson-L/Epson-L4150/s/SPT_C11CG25301?review-filter=macOS+11.x)
 
 ## Configurations
 
@@ -43,4 +43,3 @@ Manual steps not to forget:
     - add "Toggle Full Screen" - command + enter
 - Mission Control
   - Not rearrange by usage
-
