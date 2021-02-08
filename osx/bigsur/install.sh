@@ -19,6 +19,7 @@ brew install neovim/neovim/neovim
 pip3 install neovim
 brew install tig
 brew install taglib
+brew tap heroku/brew && brew install heroku
 
 # GH Depencency
 brew install gh
@@ -26,3 +27,6 @@ brew install gh
 brew install libuv # fails w/o xcode
 brew install openssl
 brew install zlib
+brew install postgresql
+brew install mysql
+
