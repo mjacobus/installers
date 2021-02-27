@@ -22,6 +22,8 @@ brew install taglib
 brew tap heroku/brew && brew install heroku
 brew install msyql-client
 brew install httpie
+brew install pick
+brew install cloc # line counter
 
 
 # GH Depencency

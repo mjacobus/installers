@@ -43,3 +43,6 @@ Manual steps not to forget:
     - add "Toggle Full Screen" - command + enter
 - Mission Control
   - Not rearrange by usage
+- https://www.displaylink.com/downloads/
+- Fanny (check cpu temp)
+- Battery Health 2
