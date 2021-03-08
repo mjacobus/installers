@@ -46,3 +46,4 @@ Manual steps not to forget:
 - https://www.displaylink.com/downloads/
 - Fanny (check cpu temp)
 - Battery Health 2
+- Iterm: Preferences -> Appearance -> Windows -> Show line under title bar when the tab bar is not visible. [source](https://www.reddit.com/r/commandline/comments/kish0e/macos_flashing_white_line_at_top_of_screen_when/)
