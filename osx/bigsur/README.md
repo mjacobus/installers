@@ -47,3 +47,12 @@ Manual steps not to forget:
 - Fanny (check cpu temp)
 - Battery Health 2
 - Iterm: Preferences -> Appearance -> Windows -> Show line under title bar when the tab bar is not visible. [source](https://www.reddit.com/r/commandline/comments/kish0e/macos_flashing_white_line_at_top_of_screen_when/)
+
+## Neovim
+
+- Install pip3 pio2
+  - pipx install neovim
+
+## Fixes
+
+- Blinking white line at the top of the full screen iterm: https://gitlab.com/gnachman/iterm2/-/issues/9199#note_518852199
