@@ -29,6 +29,7 @@ brew install re2c
 brew install libgd
 brew install libiconv
 brew install libzip
+brew install ffmpeg
 
 
 # GH Depencency
