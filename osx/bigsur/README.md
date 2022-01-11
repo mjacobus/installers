@@ -24,6 +24,8 @@ Manual steps not to forget:
   - Change spotlight keyboard shortcut
   - Set Alfred to command + space
 - Install printer [L4150](https://epson.com.br/Suporte/Impressoras/Impressoras-multifuncionais/Epson-L/Epson-L4150/s/SPT_C11CG25301?review-filter=macOS+11.x)
+- Docker docker
+  - Increase its memory
 
 ## Configurations
 
@@ -35,7 +37,7 @@ Manual steps not to forget:
 - Mouse:
   - Increase speed
   - Disable natural scroll
-- Keybaord
+- Keyboard
   - Change key repeat (max)
   - Change key repeat wait (min)
   - Shortcuts > App Shortcuts
