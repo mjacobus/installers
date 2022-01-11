@@ -7,7 +7,8 @@ Manual steps not to forget:
   - 1 Password
   - Language Tool
   - Google Translator
-  - 
+- Google Drive
+- Tempus Stop Watch
 - Sync brave bookmarks
 - Install slack
 - Install Zoom
@@ -56,3 +57,7 @@ Manual steps not to forget:
 ## Fixes
 
 - Blinking white line at the top of the full screen iterm: https://gitlab.com/gnachman/iterm2/-/issues/9199#note_518852199
+
+## Before formatting
+
+- Backup Alfredo config

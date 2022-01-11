@@ -4,11 +4,11 @@
 
 set -ev
 
-brew unlink luajit
+# brew unlink luajit
 brew install --HEAD luajit
 
 brew install luarocks
 brew install luv
 
-brew unlink neovim
+# brew unlink neovim
 brew install --HEAD neovim

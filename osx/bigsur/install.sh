@@ -14,13 +14,13 @@ brew install gpg
 brew install vim # --override-system-vim
 brew install wget
 brew install watch
-brew install python3
-brew install neovim/neovim/neovim
-pip3 install neovim
+# brew install python3
+# brew install neovim/neovim/neovim
+# pip3 install neovim
 brew install tig
 brew install taglib
 brew tap heroku/brew && brew install heroku
-brew install msyql-client
+# brew install msyql-client
 brew install httpie
 brew install pick
 brew install cloc # line counter
@@ -38,7 +38,7 @@ brew install gh
 brew install libuv # fails w/o xcode
 brew install openssl
 brew install zlib
-brew install postgresql
+# brew install postgresql
 # brew install mysql
 
 
