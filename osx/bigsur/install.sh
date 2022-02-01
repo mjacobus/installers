@@ -49,3 +49,7 @@ brew install zlib
 brew install ripgrep
 brew install fd
 brew install fzf
+
+# Kitty
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+brew install xsel # copy with select on terminal
