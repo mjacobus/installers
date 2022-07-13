@@ -53,3 +53,6 @@ brew install fzf
 # Kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 brew install xsel # copy with select on terminal
+
+# PHP dependencies (asdf)
+brew install gmp libsodium imagemagick
