@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+file = File.expand_path('../../../vagrant_helper', __FILE__);
+require_relative file
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+
+  config.vm.synced_folder "~/Projects", "/home/vagrant/Projects"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "Ubuntu 20.04-dev"
+    vb.gui = true
+
+    vb.memory = VagrantHelper.new(RbConfig::CONFIG["host_os"]).memory_fraction(2)
+
+    vb.customize ["modifyvm", :id, "--vram", "128"]
+    vb.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
+
+    # vb.customize ["modifyvm", :id, "--video", "16MB"] # error
+
+    # vb.customize ["modifyvm", :id, "--monitorcount", "2"]
+
+    # Attach an optical drive to a SATA controller
+    vb.customize ['storageattach', :id, '--storagectl', 'IDE', '--port', 1, '--device', 0, '--type', 'dvddrive', '--medium', 'emptydrive']
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    cd /vagrant
+    ./vagrant-provision.sh
+  SHELL
+end
