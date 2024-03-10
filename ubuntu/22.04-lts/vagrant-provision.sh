@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo apt-get update
+
 ./installers/base.sh
 ./installers/ubuntu-desktop.sh
 ./installers/brazilian-timezone.sh
