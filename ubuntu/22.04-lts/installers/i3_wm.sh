@@ -8,11 +8,5 @@
 sudo apt install ./keyring.deb
 echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
 sudo apt update
-sudo apt install i3
-
-# According to chatgpt:
-# echo "Adding the Regolith PPA and installing the latest i3..."
-# sudo add-apt-repository -y ppa:regolith-linux/release
-# sudo apt update
-# sudo apt install -y i3
-# echo "i3 installation complete."
+sudo apt install -y i3
+sudo apt install -y i3lock

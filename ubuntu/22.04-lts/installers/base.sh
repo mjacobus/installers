@@ -7,6 +7,9 @@ sudo apt install -y git
 sudo apt install -y curl
 sudo apt install -y zsh
 sudo apt install -y htop
+sudo apt install -y silversearcher-ag
+sudo apt install -y ripgrep
+sudo apt install -y scrot xclip
 
 sudo apt install -y  build-essential
 sudo apt install -y libssl-dev
@@ -47,6 +50,9 @@ sudo apt install -y luajit
 sudo apt install -y libmpack-dev
 sudo apt install -y libunibilium-dev
 sudo apt install -y flatpak
+
+sudo apt install -y imagemagick
+sudo apt install -y libmagickwand-dev
 
 
 #  libuv  luajit-openresty luv msgpack unibilium
