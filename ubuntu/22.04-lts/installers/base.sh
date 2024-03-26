@@ -10,6 +10,7 @@ sudo apt install -y htop
 sudo apt install -y silversearcher-ag
 sudo apt install -y ripgrep
 sudo apt install -y scrot xclip
+sudo apt install -y jq
 
 sudo apt install -y  build-essential
 sudo apt install -y libssl-dev
