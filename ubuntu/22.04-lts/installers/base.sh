@@ -54,6 +54,7 @@ sudo apt install -y flatpak
 
 sudo apt install -y imagemagick
 sudo apt install -y libmagickwand-dev
+sudo apt install -y watchman
 
 
 #  libuv  luajit-openresty luv msgpack unibilium
