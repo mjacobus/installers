@@ -58,3 +58,5 @@ sudo apt install -y watchman
 
 
 #  libuv  luajit-openresty luv msgpack unibilium
+
+sudo apt-get -y install libmysqlclient-dev
