@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if command -v nvim &>/dev/null; then
-	echo "neovim is already installed"
-	exit
+	exit 0
 fi
 
+echo "Installing neovim..."
 brew install --HEAD neovim

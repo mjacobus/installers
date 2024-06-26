@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-# skip brew installatin if already installed
 if command -v brew &>/dev/null; then
-	echo "Homebrew is already installed"
-	exit
+	exit 0
 fi
 
+echo "Installing homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

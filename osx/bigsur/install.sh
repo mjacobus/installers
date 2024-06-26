@@ -31,7 +31,6 @@ brew install libiconv
 brew install libzip
 brew install ffmpeg
 
-
 # GH Depencency
 brew install gh
 
@@ -40,7 +39,6 @@ brew install openssl
 brew install zlib
 # brew install postgresql
 # brew install mysql
-
 
 # also install, but not included here yet
 # docker

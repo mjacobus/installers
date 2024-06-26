@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Installing OS dependencies..."
 # libs - dependencies for I.E. asdf install ruby
 brew install readline libyaml zlib libffi openssl@3 autoconf pkg-config
 brew install icu4c

@@ -10,3 +10,66 @@ set -e
 ./installers/docker.sh
 ./installers/gh-cli.sh
 ./installers/universal-ctags.sh
+./installers/1password.sh
+./installers/htop.sh
+./installers/tree.sh
+
+../the_silver_searcher.sh
+../watch.sh
+../wget.sh
+
+# jq
+if [ -x "$(command -v jq)" ]; then
+	echo "jq is already installed"
+else
+	echo "Installing jq"
+	brew install jq
+fi
+
+# tig
+if [ -x "$(command -v tig)" ]; then
+	echo "tig is already installed"
+else
+	echo "Installing tig"
+	brew install tig
+fi
+
+# httpie
+if [ -x "$(command -v http)" ]; then
+	echo "httpie is already installed"
+else
+	echo "Installing httpie"
+	brew install httpie
+fi
+
+# heroku cli
+if [ -x "$(command -v heroku)" ]; then
+	echo "heroku cli is already installed"
+else
+	echo "Installing heroku cli"
+	brew tap heroku/brew && brew install heroku
+fi
+
+# ripgrep
+if [ -x "$(command -v rg)" ]; then
+	echo "ripgrep is already installed"
+else
+	echo "Installing ripgrep"
+	brew install ripgrep
+fi
+
+# fzf
+if [ -x "$(command -v fzf)" ]; then
+	echo "fzf is already installed"
+else
+	echo "Installing fzf"
+	brew install fzf
+fi
+
+# kitty
+if [ -x "$(command -v kitty)" ]; then
+	echo "kitty is already installed"
+else
+	echo "Installing kitty"
+	brew install kitty
+fi
