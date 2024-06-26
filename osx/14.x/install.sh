@@ -73,3 +73,19 @@ else
 	echo "Installing kitty"
 	brew install kitty
 fi
+
+# spectacle
+if [ -d "/Applications/Spectacle.app" ]; then
+	echo "spectacle is already installed"
+else
+	echo "Installing spectacle"
+	brew install --cask spectacle
+fi
+
+# alfred
+if [ -d "/Applications/Alfred 5.app" ]; then
+	echo "alfred is already installed"
+else
+	echo "Installing alfred"
+	brew install --cask alfred
+fi
