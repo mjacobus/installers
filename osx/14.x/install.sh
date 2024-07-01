@@ -13,6 +13,7 @@ set -e
 ./installers/1password.sh
 ./installers/htop.sh
 ./installers/tree.sh
+./installers/wireguard.sh
 
 ../the_silver_searcher.sh
 ../watch.sh
@@ -88,4 +89,36 @@ if [ -d "/Applications/Alfred 5.app" ]; then
 else
 	echo "Installing alfred"
 	brew install --cask alfred
+fi
+
+# yabai
+if [ -x "$(command -v yabai)" ]; then
+	echo "yabai is already installed"
+else
+	echo "Installing yabai"
+	brew install koekeishiya/formulae/yabai
+fi
+
+# skhd
+if [ -x "$(command -v skhd)" ]; then
+	echo "skhd is already installed"
+else
+	echo "Installing skhd"
+	brew install koekeishiya/formulae/skhd
+fi
+
+# amnethyst tiling window manager
+if [ -d "/Applications/Amethyst.app" ]; then
+	echo "Amethyst is already installed"
+else
+	echo "Installing Amethyst"
+	brew install --cask amethyst
+fi
+
+# hammerspoon
+if [ -d "/Applications/Hammerspoon.app" ]; then
+	echo "Hammerspoon is already installed"
+else
+	echo "Installing Hammerspoon"
+	brew install hammerspoon
 fi
