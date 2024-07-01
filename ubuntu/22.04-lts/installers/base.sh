@@ -12,7 +12,7 @@ sudo apt install -y ripgrep
 sudo apt install -y scrot xclip
 sudo apt install -y jq
 
-sudo apt install -y  build-essential
+sudo apt install -y build-essential
 sudo apt install -y libssl-dev
 sudo apt install -y zlib1g-dev
 sudo apt install -y libbz2-dev
@@ -56,7 +56,9 @@ sudo apt install -y imagemagick
 sudo apt install -y libmagickwand-dev
 sudo apt install -y watchman
 
-
 #  libuv  luajit-openresty luv msgpack unibilium
 
 sudo apt-get -y install libmysqlclient-dev
+
+# screenredcord
+sudo apt install -y ffmpeg slop whiptail beep
