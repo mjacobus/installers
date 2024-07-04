@@ -14,6 +14,9 @@ set -e
 ./installers/htop.sh
 ./installers/tree.sh
 ./installers/wireguard.sh
+./installers/vnc-viewer.sh
+./installers/nomad.sh
+./installers/dbeaver.sh
 # ./installers/vagrant.sh
 
 ../the_silver_searcher.sh
