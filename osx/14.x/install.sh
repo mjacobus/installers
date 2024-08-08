@@ -3,6 +3,10 @@
 set -e
 
 ./installers/brew.sh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew install --cask iterm2
+
 ./installers/os-dependencies.sh
 ./installers/nvim.sh
 ./installers/stow.sh
