@@ -9,6 +9,7 @@ brew install --cask iterm2
 
 ./installers/os-dependencies.sh
 ./installers/nvim.sh
+./installers/postgres.sh
 ./installers/stow.sh
 ./installers/tmux.sh
 ./installers/docker.sh

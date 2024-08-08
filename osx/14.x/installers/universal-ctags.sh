@@ -2,6 +2,7 @@
 
 if [ "$(command -v ctags)" ]; then
 	if ctags --version | grep -q "Universal Ctags"; then
+		echo "Ctags already installed"
 		exit 0
 	fi
 fi

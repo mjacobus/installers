@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -x "$(command -v htop)" ]; then
-	return 0
+	exit 0
 fi
 
 echo "Installing htop..."

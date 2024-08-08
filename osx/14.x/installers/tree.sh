@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -x "$(command -v tree)" ]; then
-	return 0
+	echo "tree alrady installed"
+	exit 0
 fi
 
 echo "Installing tree..."
