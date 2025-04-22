@@ -6,6 +6,7 @@ brew install readline libyaml zlib libffi openssl@3 autoconf pkg-config
 brew install icu4c
 brew install gnu-tar gpg
 brew install gcc readline zlib curl ossp-uuid imagemagick@7 libpq
+brew install libx2 libxslt
 
 # export LDFLAGS="-L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/zlib/lib -L/opt/homebrew/opt/libffi/lib -L/opt/homebrew/opt/openssl@3/lib"
 # export CPPFLAGS="-I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/zlib/include -I/opt/homebrew/opt/libffi/include -I/opt/homebrew/opt/openssl@3/include"
