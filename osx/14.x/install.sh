@@ -8,6 +8,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install --cask iterm2
 
 ./installers/os-dependencies.sh
+./installers/fd.sh
 ./installers/nvim.sh
 ./installers/postgres.sh
 ./installers/stow.sh
