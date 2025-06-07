@@ -133,4 +133,11 @@ else
 	brew install hammerspoon
 fi
 
+if [ -d "/Applications/Slack.app" ]; then
+	info "Slack is already installed"
+else
+	info "Installing Slack"
+	brew install --cask slack
+fi
+
 info "FINISHED!!"
