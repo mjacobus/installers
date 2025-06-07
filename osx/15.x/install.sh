@@ -5,130 +5,134 @@ set -e
 ./installers/brew.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+function info() {
+	echo "Info =====> $1"
+}
+
 brew install --cask iterm2
 
-./installers/os-dependencies.sh
-./installers/fd.sh
-./installers/nvim.sh
-./installers/postgres.sh
-./installers/stow.sh
-./installers/tmux.sh
-./installers/docker.sh
-./installers/gh-cli.sh
-./installers/universal-ctags.sh
-./installers/1password.sh
-./installers/htop.sh
-./installers/tree.sh
-./installers/wireguard.sh
-./installers/vnc-viewer.sh
-./installers/nomad.sh
-./installers/dbeaver.sh
-# ./installers/vagrant.sh
-
-../the_silver_searcher.sh
-../watch.sh
-../wget.sh
+# ./installers/os-dependencies.sh
+# ./installers/fd.sh
+# ./installers/nvim.sh
+# ./installers/postgres.sh
+# ./installers/stow.sh
+# ./installers/tmux.sh
+# ./installers/docker.sh
+# ./installers/gh-cli.sh
+# ./installers/universal-ctags.sh
+# ./installers/1password.sh
+# ./installers/htop.sh
+# ./installers/tree.sh
+# ./installers/wireguard.sh
+# ./installers/vnc-viewer.sh
+# ./installers/nomad.sh
+# ./installers/dbeaver.sh
+# # ./installers/vagrant.sh
+#
+# ../the_silver_searcher.sh
+# ../watch.sh
+# ../wget.sh
 
 # jq
 if [ -x "$(command -v jq)" ]; then
-	echo "jq is already installed"
+	info "jq is already installed"
 else
-	echo "Installing jq"
+	info "Installing jq"
 	brew install jq
 fi
 
 # tig
 if [ -x "$(command -v tig)" ]; then
-	echo "tig is already installed"
+	info "tig is already installed"
 else
-	echo "Installing tig"
+	info "Installing tig"
 	brew install tig
 fi
 
 # httpie
 if [ -x "$(command -v http)" ]; then
-	echo "httpie is already installed"
+	info "httpie is already installed"
 else
-	echo "Installing httpie"
+	info "Installing httpie"
 	brew install httpie
 fi
 
 # heroku cli
 if [ -x "$(command -v heroku)" ]; then
-	echo "heroku cli is already installed"
+	info "heroku cli is already installed"
 else
-	echo "Installing heroku cli"
+	info "Installing heroku cli"
 	brew tap heroku/brew && brew install heroku
 fi
 
 # ripgrep
 if [ -x "$(command -v rg)" ]; then
-	echo "ripgrep is already installed"
+	info "ripgrep is already installed"
 else
-	echo "Installing ripgrep"
+	info "Installing ripgrep"
 	brew install ripgrep
 fi
 
 # fzf
 if [ -x "$(command -v fzf)" ]; then
-	echo "fzf is already installed"
+	info "fzf is already installed"
 else
-	echo "Installing fzf"
+	info "Installing fzf"
 	brew install fzf
 fi
 
 # kitty
 if [ -x "$(command -v kitty)" ]; then
-	echo "kitty is already installed"
+	info "kitty is already installed"
 else
-	echo "Installing kitty"
+	info "Installing kitty"
 	brew install kitty
 fi
 
 # spectacle
 if [ -d "/Applications/Spectacle.app" ]; then
-	echo "spectacle is already installed"
+	info "spectacle is already installed"
 else
-	echo "Installing spectacle"
-	brew install --cask spectacle
+	info "CANNOT INSTALL SPECTACLE VIA BREW/CASK"
+	# brew install --cask spectacle
 fi
 
 # alfred
 if [ -d "/Applications/Alfred 5.app" ]; then
-	echo "alfred is already installed"
+	info "alfred is already installed"
 else
-	echo "Installing alfred"
+	info "Installing alfred"
 	brew install --cask alfred
 fi
 
 # yabai
 if [ -x "$(command -v yabai)" ]; then
-	echo "yabai is already installed"
+	info "yabai is already installed"
 else
-	echo "Installing yabai"
+	info "Installing yabai"
 	brew install koekeishiya/formulae/yabai
 fi
 
 # skhd
 if [ -x "$(command -v skhd)" ]; then
-	echo "skhd is already installed"
+	info "skhd is already installed"
 else
-	echo "Installing skhd"
+	info "Installing skhd"
 	brew install koekeishiya/formulae/skhd
 fi
 
 # amnethyst tiling window manager
 if [ -d "/Applications/Amethyst.app" ]; then
-	echo "Amethyst is already installed"
+	info "Amethyst is already installed"
 else
-	echo "Installing Amethyst"
+	info "Installing Amethyst"
 	brew install --cask amethyst
 fi
 
 # hammerspoon
 if [ -d "/Applications/Hammerspoon.app" ]; then
-	echo "Hammerspoon is already installed"
+	info "Hammerspoon is already installed"
 else
-	echo "Installing Hammerspoon"
+	info "Installing Hammerspoon"
 	brew install hammerspoon
 fi
