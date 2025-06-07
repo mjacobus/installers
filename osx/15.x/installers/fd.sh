@@ -3,8 +3,8 @@
 # unless fd is installed
 
 if [ -x "$(command -v fd)" ]; then
-	echo "fd is already installed"
+	info "fd is already installed"
 else
-	echo "Installing fd"
+	info "Installing fd"
 	brew install fd
 fi

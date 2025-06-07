@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -x "$(command -v gh)" ]; then
-	exit 0
+	info "gh cli installed"
+else
+	info "Installing gh..."
+	brew install gh
 fi
-
-echo "Installing gh..."
-brew install gh

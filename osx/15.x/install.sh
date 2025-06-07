@@ -2,36 +2,32 @@
 
 set -e
 
+source ./functions.sh
 ./installers/brew.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-function info() {
-	echo "Info =====> $1"
-}
-
-brew install --cask iterm2
-
-# ./installers/os-dependencies.sh
-# ./installers/fd.sh
-# ./installers/nvim.sh
-# ./installers/postgres.sh
-# ./installers/stow.sh
-# ./installers/tmux.sh
-# ./installers/docker.sh
-# ./installers/gh-cli.sh
-# ./installers/universal-ctags.sh
-# ./installers/1password.sh
-# ./installers/htop.sh
-# ./installers/tree.sh
-# ./installers/wireguard.sh
-# ./installers/vnc-viewer.sh
-# ./installers/nomad.sh
-# ./installers/dbeaver.sh
-# # ./installers/vagrant.sh
+# info "cask iterm2"
+# brew install --cask iterm2
 #
-# ../the_silver_searcher.sh
-# ../watch.sh
-# ../wget.sh
+source ./installers/os-dependencies.sh
+source ./installers/fd.sh
+source ./installers/nvim.sh
+source ./installers/postgres.sh
+source ./installers/stow.sh
+source ./installers/tmux.sh
+source ./installers/docker.sh
+source ./installers/gh-cli.sh
+source ./installers/universal-ctags.sh
+source ./installers/1password.sh
+source ./installers/htop.sh
+source ./installers/tree.sh
+# source ./installers/nomad.sh # Disabled because it will change license to BUSL
+source ./installers/dbeaver.sh
+source ./installers/vagrant.sh
+
+source ../the_silver_searcher.sh
+source ../watch.sh
+source ../wget.sh
 
 # jq
 if [ -x "$(command -v jq)" ]; then
@@ -136,3 +132,5 @@ else
 	info "Installing Hammerspoon"
 	brew install hammerspoon
 fi
+
+info "FINISHED!!"

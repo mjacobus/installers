@@ -2,8 +2,8 @@
 
 # skip if installed
 if [ -d "/Applications/Docker.app" ]; then
-	exit 0
+	info "Docker installed"
+else
+	info "Installing Docker"
+	brew install --cask docker
 fi
-
-echo "Installing Docker"
-brew install --cask docker

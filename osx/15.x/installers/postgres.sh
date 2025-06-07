@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if command -v psql &>/dev/null; then
-	exit 0
+	info "PSQL installed"
+else
+	info "Installing postgres..."
+	brew install postgresql
 fi
-
-echo "Installing postgres..."
-brew install postgresql

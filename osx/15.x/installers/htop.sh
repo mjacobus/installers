@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -x "$(command -v htop)" ]; then
-	exit 0
+	info "htop installed"
+else
+	info "Installing htop..."
+	brew install htop
 fi
-
-echo "Installing htop..."
-brew install htop

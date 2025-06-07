@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if command -v stow &>/dev/null; then
-	exit
+	info "Stow installed"
+else
+	info "Installing stow..."
+	brew install stow
 fi
-
-echo "Installing stow..."
-brew install stow
