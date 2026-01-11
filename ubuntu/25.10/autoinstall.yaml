@@ -10,7 +10,8 @@ autoinstall:
     hostname: ubuntu-workstation
     username: mjacobus
     # Generate with: mkpasswd --method=SHA-512
-    # password: changeme
+    password: $6$FJ6w96Hzf4bZuW9E$XJWEAR0KViVDsY5CLJfWBlS1R8yAjzCy5kQ8.7Soj/NNfmTv/VNxi4FcBOxEKoBZ48f3p5rInHRGbvVTFH8B3.
+
 
   ssh:
     install-server: true
