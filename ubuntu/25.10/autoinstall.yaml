@@ -1,0 +1,126 @@
+#cloud-config
+autoinstall:
+  version: 1
+
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+
+  identity:
+    hostname: ubuntu-workstation
+    username: marcelo
+    # Generate with: mkpasswd --method=SHA-512
+    # password: changeme
+
+  ssh:
+    install-server: true
+    allow-pw: true
+
+  packages:
+    # Base utilities
+    - wget
+    - curl
+    - stow
+    - zsh
+    - htop
+    - jq
+    - bison
+    - git
+    - tree
+    - tig
+    - httpie
+    - fzf
+    - ripgrep
+    - fd-find
+    - silversearcher-ag
+    - libreadline-dev
+
+    # Build essentials
+    - build-essential
+    - libssl-dev
+    - zlib1g-dev
+    - libbz2-dev
+    - libsqlite3-dev
+    - libncurses5-dev
+    - libncursesw5-dev
+    - xz-utils
+    - tk-dev
+    - libffi-dev
+    - liblzma-dev
+    - cmake
+    - pkg-config
+    - autoconf
+
+    # Database clients
+    - postgresql-client
+    - libpq-dev
+
+    # i3 window manager (default config)
+    - i3
+    - i3status
+    - i3lock
+    - dmenu
+    - rofi
+    - feh
+    - picom
+    - xterm
+
+    # Desktop utilities
+    - kitty
+    - scrot
+    - xclip
+    - arandr
+    - pavucontrol
+    - network-manager-gnome
+    - dunst
+    - lxappearance
+
+    # Development
+    - neovim
+    - tmux
+    - universal-ctags
+
+    # Fonts
+    - fonts-firacode
+    - fonts-font-awesome
+
+  snaps:
+    - name: slack
+      classic: true
+    - name: code
+      classic: true
+
+  late-commands:
+    # Install GitHub CLI
+    - curtin in-target -- bash -c 'curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg'
+    - curtin in-target -- bash -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" > /etc/apt/sources.list.d/github-cli.list'
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get install -y gh
+
+    # Install Docker
+    - curtin in-target -- bash -c 'install -m 0755 -d /etc/apt/keyrings'
+    - curtin in-target -- bash -c 'curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg'
+    - curtin in-target -- bash -c 'chmod a+r /etc/apt/keyrings/docker.gpg'
+    - curtin in-target -- bash -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" > /etc/apt/sources.list.d/docker.list'
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    - curtin in-target -- usermod -aG docker marcelo
+
+    # Install mise (version manager)
+    - curtin in-target -- bash -c 'install -dm 755 /etc/apt/keyrings'
+    - curtin in-target -- bash -c 'curl -fSs https://mise.jdx.dev/gpg-key.pub | tee /etc/apt/keyrings/mise-archive-keyring.pub > /dev/null'
+    - curtin in-target -- bash -c 'echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.pub arch=amd64] https://mise.jdx.dev/deb stable main" > /etc/apt/sources.list.d/mise.list'
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get install -y mise
+
+    # Install ngrok
+    - curtin in-target -- bash -c 'curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc > /dev/null'
+    - curtin in-target -- bash -c 'echo "deb https://ngrok-agent.s3.amazonaws.com bookworm main" > /etc/apt/sources.list.d/ngrok.list'
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get install -y ngrok
+
+    # Install Heroku CLI
+    - curtin in-target -- bash -c 'curl https://cli-assets.heroku.com/install-ubuntu.sh | sh'
+
+    # Set zsh as default shell for user
+    - curtin in-target -- chsh -s /usr/bin/zsh marcelo
