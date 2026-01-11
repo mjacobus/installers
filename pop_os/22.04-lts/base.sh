@@ -11,6 +11,7 @@ sudo apt install -y jq
 sudo apt install -y bison
 sudo apt install libreadline-dev
 sudo apt install -y silversearcher-ag
+sudo apt install ffmpeg
 # sudo apt install -y ripgrep
 # sudo apt install -y scrot xclip
 #
