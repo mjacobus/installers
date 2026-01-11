@@ -8,7 +8,7 @@ autoinstall:
 
   identity:
     hostname: ubuntu-workstation
-    username: marcelo
+    username: mjacobus
     # Generate with: mkpasswd --method=SHA-512
     # password: changeme
 
@@ -104,7 +104,7 @@ autoinstall:
     - curtin in-target -- bash -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" > /etc/apt/sources.list.d/docker.list'
     - curtin in-target -- apt-get update
     - curtin in-target -- apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-    - curtin in-target -- usermod -aG docker marcelo
+    - curtin in-target -- usermod -aG docker mjacobus
 
     # Install mise (version manager)
     - curtin in-target -- bash -c 'install -dm 755 /etc/apt/keyrings'
@@ -123,4 +123,4 @@ autoinstall:
     - curtin in-target -- bash -c 'curl https://cli-assets.heroku.com/install-ubuntu.sh | sh'
 
     # Set zsh as default shell for user
-    - curtin in-target -- chsh -s /usr/bin/zsh marcelo
+    - curtin in-target -- chsh -s /usr/bin/zsh mjacobus
